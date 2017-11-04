@@ -75,10 +75,7 @@ public class FragmentMultiline extends Fragment {
         }
 
         textview_q_title.setText(Html.fromHtml(q_data.getQuestionTitle()));
-        editText_answer.requestFocus();
         InputMethodManager imm = (InputMethodManager) mContext.getSystemService(Service.INPUT_METHOD_SERVICE);
         imm.showSoftInput(editText_answer, 0);
-
-
     }
 }
