@@ -30,7 +30,7 @@ public class FragmentCheckboxes extends Fragment {
     private Button button_continue;
     private TextView textview_q_title;
     private LinearLayout linearLayout_checkboxes;
-    private final ArrayList<CheckBox> allCb = new ArrayList<>();
+    private final ArrayList<CheckBox> allCb = new ArrayList<CheckBox>();
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -76,7 +76,6 @@ public class FragmentCheckboxes extends Fragment {
                 button_continue.setVisibility(View.GONE);
             }
         }
-
     }
 
     @Override
@@ -114,8 +113,5 @@ public class FragmentCheckboxes extends Fragment {
                 }
             });
         }
-
     }
-
-
 }

@@ -46,7 +46,7 @@ public class SurveyActivity extends AppCompatActivity {
 
         Log.i("json Object = ", String.valueOf(mSurveyPojo.getQuestions()));
 
-        final ArrayList<Fragment> arraylist_fragments = new ArrayList<>();
+        final ArrayList<Fragment> arraylist_fragments = new ArrayList<Fragment>();
 
         //- START -
         if (!mSurveyPojo.getSurveyProperties().getSkipIntro()) {

@@ -31,9 +31,8 @@ public class FragmentRadioboxes extends Fragment {
     private Button button_continue;
     private TextView textview_q_title;
     private RadioGroup radioGroup;
-    private final ArrayList<RadioButton> allRb = new ArrayList<>();
+    private final ArrayList<RadioButton> allRb = new ArrayList<RadioButton>();
     private boolean at_leaset_one_checked = false;
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -121,9 +120,5 @@ public class FragmentRadioboxes extends Fragment {
                 button_continue.setVisibility(View.GONE);
             }
         }
-
-
     }
-
-
 }

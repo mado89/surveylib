@@ -9,7 +9,7 @@ import java.util.LinkedHashMap;
 
 public class Answers {
     private volatile static Answers uniqueInstance;
-    private final LinkedHashMap<String, String> answered_hashmap = new LinkedHashMap<>();
+    private final LinkedHashMap<String, String> answered_hashmap = new LinkedHashMap<String, String>();
 
 
     private Answers() {
