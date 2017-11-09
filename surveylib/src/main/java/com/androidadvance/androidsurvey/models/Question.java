@@ -33,12 +33,6 @@ public class Question implements Serializable {
     @SerializedName("choices")
     @Expose
     private List<String> choices = new ArrayList<String>();
-    @SerializedName("min")
-    @Expose
-    private Integer min;
-    @SerializedName("max")
-    @Expose
-    private Integer max;
     @SerializedName("number_of_lines")
     @Expose
     private Integer numberOfLines;
@@ -167,42 +161,6 @@ public class Question implements Serializable {
      */
     public void setChoices(List<String> choices) {
         this.choices = choices;
-    }
-
-    /**
-     *
-     * @return
-     * The min
-     */
-    public Integer getMin() {
-        return min;
-    }
-
-    /**
-     *
-     * @param min
-     * The min
-     */
-    public void setMin(Integer min) {
-        this.min = min;
-    }
-
-    /**
-     *
-     * @return
-     * The max
-     */
-    public Integer getMax() {
-        return max;
-    }
-
-    /**
-     *
-     * @param max
-     * The max
-     */
-    public void setMax(Integer max) {
-        this.max = max;
     }
 
     /**
