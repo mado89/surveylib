@@ -14,9 +14,9 @@ import android.widget.CompoundButton;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.androidadvance.androidsurvey.Answers;
 import com.androidadvance.androidsurvey.R;
 import com.androidadvance.androidsurvey.SurveyActivity;
+import com.androidadvance.androidsurvey.models.Answers;
 import com.androidadvance.androidsurvey.models.Question;
 
 import java.util.ArrayList;
@@ -65,7 +65,7 @@ public class FragmentCheckboxes extends Fragment {
 
         if (the_choices.length() > 2) {
             the_choices = the_choices.substring(0, the_choices.length() - 2);
-            Answers.getInstance().put_answer(textview_q_title.getText().toString(), the_choices);
+            Answers.getInstance().put_answer(q_data, the_choices);
         }
 
 

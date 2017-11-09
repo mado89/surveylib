@@ -10,9 +10,9 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 
-import com.androidadvance.androidsurvey.Answers;
 import com.androidadvance.androidsurvey.R;
 import com.androidadvance.androidsurvey.SurveyActivity;
+import com.androidadvance.androidsurvey.models.Answers;
 import com.androidadvance.androidsurvey.models.SurveyProperties;
 
 public class FragmentEnd extends Fragment {

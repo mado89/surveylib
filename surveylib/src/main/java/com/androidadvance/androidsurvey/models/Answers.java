@@ -1,4 +1,4 @@
-package com.androidadvance.androidsurvey;
+package com.androidadvance.androidsurvey.models;
 
 import com.google.gson.Gson;
 
@@ -15,8 +15,8 @@ public class Answers {
     private Answers() {
     }
 
-    public void put_answer(String key, String value) {
-        answered_hashmap.put(key, value);
+    public void put_answer(Question q, String answer) {
+        answered_hashmap.put(q.getQuestionID(), answer);
     }
 
     public String get_json_object() {

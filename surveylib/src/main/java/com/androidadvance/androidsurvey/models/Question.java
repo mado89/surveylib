@@ -10,6 +10,11 @@ import com.google.gson.annotations.SerializedName;
 
 public class Question implements Serializable {
 
+    private static final long serialVersionUID= 1L;
+
+    @SerializedName("question_id")
+    @Expose
+    private String questionID;
     @SerializedName("question_type")
     @Expose
     private String questionType;
@@ -39,6 +44,24 @@ public class Question implements Serializable {
     private Integer numberOfLines;
 
     /**
+    *
+    * @return
+    * The questionID
+    */
+   public String getQuestionID() {
+       return questionType;
+   }
+
+   /**
+    *
+    * @param questionID
+    * The question_id
+    */
+   public void setQuestionID(String questionID) {
+     this.questionID = questionID;
+       }
+   
+   /**
      *
      * @return
      * The questionType

@@ -16,13 +16,14 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import com.androidadvance.androidsurvey.Answers;
 import com.androidadvance.androidsurvey.R;
 import com.androidadvance.androidsurvey.SurveyActivity;
+import com.androidadvance.androidsurvey.models.Answers;
 import com.androidadvance.androidsurvey.models.Question;
 
 public class FragmentNumber extends Fragment {
 
+    private Question q_data;
     private FragmentActivity mContext;
     private Button button_continue;
     private TextView textview_q_title;
@@ -40,7 +41,7 @@ public class FragmentNumber extends Fragment {
         editText_answer.setInputType(InputType.TYPE_CLASS_NUMBER | InputType.TYPE_NUMBER_FLAG_DECIMAL);
         button_continue.setOnClickListener(new View.OnClickListener() {
             @Override public void onClick(View v) {
-                Answers.getInstance().put_answer(textview_q_title.getText().toString(), editText_answer.getText().toString().trim());
+                Answers.getInstance().put_answer(q_data, editText_answer.getText().toString().trim());
                 ((SurveyActivity) mContext).go_to_next();
             }
         });
@@ -52,7 +53,7 @@ public class FragmentNumber extends Fragment {
         super.onActivityCreated(savedInstanceState);
 
         mContext = getActivity();
-        Question q_data = (Question) getArguments().getSerializable("data");
+        q_data = (Question) getArguments().getSerializable("data");
 
 
         if (q_data.getRequired()) {

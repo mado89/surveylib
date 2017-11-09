@@ -16,6 +16,7 @@ import com.androidadvance.androidsurvey.fragment.FragmentNumber;
 import com.androidadvance.androidsurvey.fragment.FragmentRadioboxes;
 import com.androidadvance.androidsurvey.fragment.FragmentStart;
 import com.androidadvance.androidsurvey.fragment.FragmentTextSimple;
+import com.androidadvance.androidsurvey.models.Answers;
 import com.androidadvance.androidsurvey.models.Question;
 import com.androidadvance.androidsurvey.models.Survey;
 import com.google.gson.Gson;
@@ -23,6 +24,7 @@ import com.google.gson.Gson;
 import java.util.ArrayList;
 
 public class SurveyActivity extends AppCompatActivity {
+    public static final String PARAM_SURVEY= "Survey";  
 
     private Survey mSurveyPojo;
     private ViewPager mPager;
@@ -37,7 +39,7 @@ public class SurveyActivity extends AppCompatActivity {
 
         if (getIntent().getExtras() != null) {
             Bundle bundle = getIntent().getExtras();
-            mSurveyPojo = new Gson().fromJson(bundle.getString("json_survey"), Survey.class);
+            mSurveyPojo = new Gson().fromJson(bundle.getString(PARAM_SURVEY), Survey.class);
             if (bundle.containsKey("style")) {
                 style_string = bundle.getString("style");
             }
